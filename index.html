@@ -1,29 +1,34 @@
-<! DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Share to Twitter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share to Twitter with Thumbnail</title>
 </head>
 <body>
 
 <!-- 示例图片 -->
-<img style="width: 50px; height: 50px;" src="https://img.zcool.cn/community/0104c15cd45b49a80121416816f1ec.jpg@1280w_1l_2o_100sh.jpg" alt="Example Image" id="shareImage">
+<img src="https://visualpoi.zone/assets/round/original/4210.jpg" alt="Example Image" id="shareImage">
+
+<!-- 示例缩略图 -->
+<img src="https://visualpoi.zone/assets/round/original/4210.jpg" alt="Thumbnail" style="display:none;" id="thumbnailImage">
 
 <!-- 分享按钮 -->
 <button onclick="shareToTwitter()">Share to Twitter</button>
 
 <script>
 function shareToTwitter() {
- // 获取图片 URL
- var imageUrl = document.getElementById('shareImage').src;
+    // 获取图片 URL 和缩略图 URL
+    var imageUrl = document.getElementById('shareImage').src;
+    var thumbnailUrl = document.getElementById('thumbnailImage').src;
 
-// 构造推特分享链接
- var tweetText = encodeURIComponent("Check out this awesome image!");
- var tweetUrl = "https://twitter.com/intent/tweet?text=" + tweetText + "&url=" + encodeURIComponent(imageUrl);
+    // 构造推特分享链接
+    var tweetText = encodeURIComponent("Check out this awesome image!");
+    var tweetUrl = "https://twitter.com/intent/tweet?text=" + tweetText + "&url=" + encodeURIComponent(imageUrl) + "&media=" + encodeURIComponent(thumbnailUrl);
 
-// 在新窗口打开推特分享链接
- window.open(tweetUrl, '_blank');
+    // 在新窗口打开推特分享链接
+    window.open(tweetUrl, '_blank');
 }
 </script>
 
