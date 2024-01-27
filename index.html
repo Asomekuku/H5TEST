@@ -4,7 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:title" content="Check out this awesome image!">
+    <meta name="twitter:description" content="A description of your content">
+    
     <title>Share to Twitter with Thumbnail</title>
+    <!-- <meta property="twitter:site" data-content="meta-twitter-site" content="www.honorofkings.com">
+    <meta property="twitter:title" data-content="meta-twitter-title" content="Honor of Kings Pre-Order Event Begins">
+    <meta property="twitter:description" data-content="meta-twitter-description" content="Claim Your Pre-Order Rewards!">
+    <meta property="twitter:url" data-content="meta-twitter-url" content="https://www.honorofkings.com/pre-register/global-en/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" data-content="meta-twitter-image" content="https://www.honorofkings.com/pre-register/share.jpg"> -->
+    <meta property="twitter:site" data-content="meta-twitter-site" content="www.honorofkings.com">
+    <meta property="twitter:title" data-content="meta-twitter-title" content="Honor of Kings Pre-Order Event Begins">
+    <meta property="twitter:description" data-content="meta-twitter-description" content="Claim Your Pre-Order Rewards!">
+    <meta property="twitter:url" data-content="meta-twitter-url" content="https://www.honorofkings.com/pre-register/global-en/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" data-content="meta-twitter-image" content="https://www.honorofkings.com/pre-register/share.jpg">
 </head>
 <body>
 
@@ -15,20 +30,25 @@
 <img src="https://visualpoi.zone/assets/round/original/4210.jpg" alt="Thumbnail" style="display:none;" id="thumbnailImage">
 
 <!-- 分享按钮 -->
-<button onclick="shareToTwitter()">Share to Twitter</button>
+<button onclick="shareToTwitter()">Share to Twitterpp1</button>
 
 <script>
 function shareToTwitter() {
-    // 获取图片 URL 和缩略图 URL
-    var imageUrl = document.getElementById('shareImage').src;
-    var thumbnailUrl = document.getElementById('thumbnailImage').src;
+    // // 获取图片 URL 和缩略图 URL
+    // var imageUrl = document.getElementById('shareImage').src;
+    // var thumbnailUrl = document.getElementById('thumbnailImage').src;
 
-    // 构造推特分享链接
-    var tweetText = encodeURIComponent("Check out this awesome image!");
-    var tweetUrl = "https://twitter.com/intent/tweet?text=" + tweetText + "&url=" + encodeURIComponent(imageUrl) + "&media=" + encodeURIComponent(thumbnailUrl);
-
-    // 在新窗口打开推特分享链接
-    window.open(tweetUrl, '_blank');
+    // // 构造推特分享链接
+    // var tweetText = encodeURIComponent("Check out this awesome image!");
+    // var tweetUrl = "https://twitter.com/intent/tweet?text=" + tweetText + "&url=" + encodeURIComponent(imageUrl) + "&media=" + encodeURIComponent(thumbnailUrl);
+    var tweetUrl = `https://twitter.com/share?url=${encodeURIComponent('https://www.honorofkings.com/pre-register/global-en/')}&text=${encodeURIComponent('https://www.honorofkings.com/pre-register/global-en/')}`
+    // // 在新窗口打开推特分享链接
+    window.open(tweetUrl);
+    // const b = ()=>_().toUpperCase();
+    // console.log(b, 'bbbb')
+    // const t = window == null ? void 0 : window.GLanguage[b()]["share-text"]
+    //   , e = `https://twitter.com/share?url=${encodeURIComponent(location.origin + location.pathname)}&text=${encodeURIComponent(t)}`;
+    // window.open(e)
 }
 </script>
 
